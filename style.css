@@ -1,0 +1,934 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem; /*56px*/
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --hue: 152;
+  --first-color: hsl(var(--hue), 24%, 32%);
+  --first-color-alt: hsl(var(--hue), 24%, 28%);
+  --first-color-light: hsl(var(--hue), 24%, 66%);
+  --first-color-lighten: hsl(var(--hue), 24%, 92%);
+  --title-color: hsl(var(--hue), 4%, 15%);
+  --text-color: hsl(var(--hue), 4%, 35%);
+  --text-color-light: hsl(var(--hue), 4%, 55%);
+  --body-color: hsl(var(--hue), 0%, 100%);
+  --container-color: #FFF;
+  --primary-color: #0f52ba;
+  --secondary-black: #4d516d;
+  --light-color: #89cfef;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Baloo Da 2";
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes Bottom ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    transition: .2s linear;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Baloo Da 2";
+    text-transform: capitalize;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+    font-family: "Baloo Da 2";
+}
+
+html,
+body {
+    background: #fff;
+    font-family: "Baloo Da 2";
+}
+
+header {
+    background-color: white;
+    box-shadow: 0px 3px 6px #0000000D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 50px;
+    z-index: 1000;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.logo{
+    width: 10rem;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    margin-top: 51px;
+}
+
+.home_img{
+    max-width: 100%;
+
+}
+
+/*========================================================================== BOOK =============================================================*/
+
+.containeer{
+    padding-left: 2rem;
+    padding-right: 0rem;
+    padding-top: 5rem;
+}
+
+.section__title h1{
+    font-size: 2rem;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}  
+
+/*.section__title h1:after,
+.section__title h1:before{
+    content: " ";
+    display: block;
+    border-bottom: 1px solid var(--primary-color);
+    border-top: 1px solid var(--primary-color);
+    height: 5px;
+    background-color: #f8f8f8;
+}*/
+
+.product__description{
+    text-align: center;
+}
+
+.containeer .grid{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+  
+.product__containeer{
+    padding: 3rem 0;
+}
+  
+.product__card{
+    display: grid;
+    position: relative;
+    justify-content: center;
+}
+  
+.product__img{
+    position: relative;
+    width: 140px;
+    justify-self: center;
+    transition: .3s;
+    padding-top: 2rem;
+}
+  
+.product__title,
+.product__price,
+span{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+    margin-bottom: 14px;
+    font-size: 15px;
+    font-family: "Baloo Da 2";
+    font-weight: 800;
+}
+  
+.product__title{
+    margin-bottom: .5rem;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 17px;
+}
+  
+.product__card:hover .product__img{
+    transform: translateY(-.5rem);
+}
+
+/*=================================================================BOOK END=======================================================*/
+
+
+
+/* --------------------------------------------------------------global styles------------------------------------------------------------------------------ */
+
+a {
+    text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+ul {
+    margin-bottom: 0px;
+}
+
+p {
+    font-size: 1rem;
+    color: #000000;
+}
+
+img {
+    width: 100%;
+    overflow: hidden;
+}
+
+* {
+    font-family: 'Hind Siliguri', 'Roboto', sans-serif, 'VideoJs';
+}
+
+/* 
+---------------------------------------------
+Hide number arrows
+--------------------------------------------- 
+*/
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+
+.main-blue-button a {
+    display: inline-block;
+    background-color: var(--secondary-black);
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 12px 25px;
+    border-radius: 23px;
+    letter-spacing: 0.25px;
+}
+
+.main-blue-button-hover a {
+    display: inline-block;
+    background-color: var(--secondary-black);
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 12px 25px;
+    border-radius: 23px;
+    letter-spacing: 0.25px;
+    transition: all .3s;
+}
+
+.main-blue-button-hover a:hover {
+    background-color: var(--primary-color);
+}
+
+.main-red-button a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 8px 25px;
+    border-radius: 23px;
+    letter-spacing: 0.25px;
+}
+
+.main-red-button-hover a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 0.3em .6em;
+    border-radius: 23px;
+    letter-spacing: 0.25px;
+    transition: all .3s;
+    font-size: 10px;
+    margin-left: 1rem;
+}
+
+.main-red-button-hover a:hover {
+    background-color: var(--secondary-black);
+}
+
+.card {
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+
+.styled-heading-one h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+/*.styled-heading-one h1:after,
+.styled-heading-one h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid var(--primary-color);
+    border-top: 1px solid var(--primary-color);
+    height: 5px;
+    background-color: #f8f8f8;
+}*/
+
+.main-blockquote {
+    position: relative;
+    max-width: 620px;
+    margin-bottom: 80px;
+    margin: 1em;
+    align-self: center;
+}
+
+.main-blockquote p {
+    background-color: white;
+    position: relative;
+    font-weight: normal;
+    margin: 0;
+    border: solid 2px red;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+/* main-blockquote right double quotes */
+
+.main-blockquote p:after {
+    content: "";
+    position: absolute;
+    border: 2px solid #e74848;
+    border-radius: 0 50px 0 0;
+    width: 60px;
+    height: 60px;
+    bottom: -60px;
+    left: 50px;
+    border-bottom: none;
+    border-left: none;
+    z-index: 3;
+}
+
+.main-blockquote p:before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    border: 6px solid white;
+    bottom: -3px;
+    left: 50px;
+    z-index: 2;
+}
+
+.main-blockquote h4 {
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0;
+    padding-top: 0.5em;
+    z-index: 1;
+    margin-left: 8rem;
+    padding-left: 0.5em;
+    color: var(--primary-color);
+}
+
+/*-------------------------------------------------------------------Pricing---------------------------------------------------------------------------------*/
+
+.pricing-tables .tables-left-dec img {
+    width: 418px;
+    height: 851px;
+    left: 0;
+    top: 120px;
+    position: absolute;
+    z-index: 1;
+}
+
+.pricing-tables .tables-right-dec img {
+    width: 359px;
+    height: 848px;
+    right: 0;
+    top: 45px;
+    position: absolute;
+    z-index: 1
+}
+
+.pricing-tables {
+    z-index: 2;
+    position: relative;
+    padding-top: 3em;
+    margin-top: 0px;
+    margin-bottom: 80px;
+}
+
+.pricing-tables .section-heading {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.pricing-tables .section-heading h2 {
+    text-align: center;
+    margin: 0px 60px 0px 60px;
+    margin-bottom: -5px;
+    position: relative;
+    z-index: 1;
+    font-size: 2rem;
+    font-family: "Baloo Da 2";
+}
+
+.pricing-tables .item {
+    position: relative;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 45px;
+}
+
+.pricing-tables .item h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2a2a2a;
+}
+
+.pricing-tables .item em {
+    color: var(--primary-color);
+    font-size: 15px;
+    display: block;
+    margin-top: 25px;
+    text-decoration: line-through;
+    font-style: normal;
+}
+
+.pricing-tables .item span {
+    font-size: 44px;
+    color: var(--primary-color);
+    font-weight: 700;
+    display: block;
+    margin-top: -5px;
+}
+
+.pricing-tables .item ul {
+    margin-top: 30px;
+}
+
+.pricing-tables .item ul li {
+    display: block;
+    font-size: 15px;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+.pricing-tables .item .main-blue-button {
+    margin-top: 40px;
+}
+
+.pricing-tables .first-item {
+    background-image: url(../images/first-plan-bg.png);
+}
+
+.pricing-tables .second-item {
+    background-image: url(../images/second-plan-bg.png);
+}
+
+.pricing-tables .third-item {
+    background-image: url(../images/third-plan-bg.png);
+}
+
+.pricing-tables .container-course .row{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.pricing-tables .container-course .row .card-title{
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--primary-color);
+    text-transform: none;
+    padding-left: 5px;
+    line-height: 16px;
+    padding-bottom: 5px;
+}
+
+.pricing-tables .container-course .row .card-title span{
+    font-weight: 800;
+    font-size: 12px;
+    color: rgb(255, 0, 0);
+    text-transform: none;
+    padding-left: 2px;
+}
+
+.pricing-tables .container-course .row .details{
+    align-items: baseline;
+    display: flex;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #a3a3a377;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    background-color: #dfdfdf1b;
+}
+
+.pricing-tables .container-course .row .details p{
+    font-size: 12px;
+}
+
+.pricing-tables .container-course .row .details i{
+    color: green;
+}
+
+
+/* ---------------------------------------------------------------------------Course price ----------------------------------------------------------- */
+.card-footer {
+    background-color: #c9c9c929;
+    padding-top: 5px;
+}
+
+.course-price-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: baseline;
+    padding-bottom: 5px;
+    padding-top: 4px;
+}
+
+.course-price-box .text-muted{
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+
+.course-price-box span,
+.course-price-box p {
+    font-weight: 800;
+    font-size: 12px;
+    text-align: center;
+    flex: auto;
+}
+
+
+
+/* ---------------------------------------------------------------------------REVIEW----------------------------------------------------------- */
+
+.review{
+    font-family: "Baloo Da 2";
+}
+.review h1 {
+    font-size: 2rem;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    font-family: "Baloo Da 2";
+}
+
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-bottom: 5rem;
+}
+
+.review .box-container .box{
+    flex:1 1 40rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: .6rem;
+    padding:3rem 2rem;
+    position: relative;
+    border: .1rem ;
+}
+
+.review .box-container .box p{
+    color: #999;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-top: 2rem;
+    font-family: "Baloo Da 2";
+}
+
+.review .box-container .box .user{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    font-family: "Baloo Da 2";
+}
+
+.review .box-container .box .user img{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.review .box-container .box .user h3{
+    font-size: 2rem;
+    color: #333;
+    font-family: "Baloo Da 2";
+    font-weight: 600;
+}
+
+.review .box-container .box .user span{
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-family: "Baloo Da 2";
+    font-weight: 500;
+}
+
+.review .more{
+    text-align: center !important;
+    padding-bottom: 10rem;
+}
+
+.review .more_info {
+    padding: 8px 22px;
+    text-align: center !important;
+    color: white;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 23px;
+    font-size: 15px;
+    text-align: center !important;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+
+.review .more_info:hover{
+    background-color: var(--secondary-black);
+}
+
+/*=================================================================FOOTER==================================================================*/
+
+.contact{
+    background-color: #f3f4f677;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-left: 50px;
+    padding-right: 20px;
+    font-family: "Baloo Da 2";
+}
+
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    gap: 3rem;
+    font-family: "Baloo Da 2";
+    
+}
+
+.contact-info a{
+    text-decoration: none;
+    color: #565656b6;
+    font-family: "Baloo Da 2";
+}
+
+.contact-info a:hover{
+    color: var(--primary-color);
+}
+
+.contact-info h4{
+    color: #212529;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-family: "Baloo Da 2";
+}
+
+.contact-info p{
+    color: #565656b6;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .42s;
+    text-decoration: none;
+    font-family: "Baloo Da 2";
+}
+
+.contact-info p:hover{
+    color: var(--primary-color);
+}
+
+.contact-info .telephone_numb{
+    color: #565656b6;
+    text-decoration: none;
+}
+
+.contact-info .telephone_numb:hover{
+    color: var(--primary-color);
+}
+
+.contact-info .gmail{
+    text-transform: lowercase; 
+    color: #565656b1;
+    text-decoration: none;
+    font-family: "Baloo Da 2";
+}
+
+.contact-info .gmail:hover{
+    color: var(--primary-color);
+}
+
+.social-icon i{
+    color: rgb(103, 103, 103);
+    margin-right: 10px;
+    font-size: 20px;
+    transition: all .42s;
+}
+
+.social-icon i:hover{
+    transform: scale(1.3);
+    color: black;
+}
+
+.credit{
+    text-align: center;
+    padding: .3rem;    
+    font-size: 12px;
+    color: #4542427a;
+    border-top: 0.01px solid rgba(0,0,0,.1);
+    background-color: #eee;
+    font-family: "Baloo Da 2";
+}
+
+.credit span{
+    font-size: small;
+    font-weight: 500;
+    font-family: "Baloo Da 2";
+}
+
+.credit span a{
+    color: #c0c0c0;
+}
+
+
+
+/*========================================================================= SCROLL UP =================================================================*/
+.scrollup{
+    position: fixed;
+    background-color: var(--first-color);
+    right: 1rem;
+    bottom: -30%;
+    display: inline-flex;
+    padding: .5rem;
+    border-radius: .25rem;
+    z-index: var(--z-tooltip);
+    opacity: .8;
+    transition: .4s;
+  }
+  
+  .scrollup__icon{
+    font-size: 5rem;
+    color: #FFF;
+  }
+  
+  .scrollup:hover{
+    background-color: var(--first-color-alt);
+    opacity: 1;
+  }
+  
+  /* Show Scroll Up*/
+  .show-scroll{
+    bottom: 3rem;
+  }
+  
+  /*=============== SCROLL BAR ===============*/
+  ::-webkit-scrollbar{
+    width: .6rem;
+    background: hsl(var(--hue), 4%, 53%);
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background: hsl(var(--hue), 4%, 29%);
+    border-radius: .5rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+
+    html{
+
+    }
+
+    header{
+        padding:2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+}
+
+@media (max-width:768px){
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: 1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2.5rem;
+    }
+
+    .icons-container .icons h3{
+        font-size: 2rem;
+    }
+    
+    .icons-container .icons span{
+        font-size: 1.7rem;
+    }
+    
+}
+
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+}
+
+
+
+
+
+
+

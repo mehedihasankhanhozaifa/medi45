@@ -1,0 +1,510 @@
+
+
+:root{
+    --primary-color: #0f52ba;
+    --secondary-black: #4d516d;
+    --light-color: #89cfef;
+    --s-primary: #0f52ba;
+    --s-secondary: #3749bb;
+    --s-hf-bg: #081621;
+    --s-b-bg: #f2f4f8;
+    --s-m-bg: #6e2594;
+    --s-s-bg: rgba(55,73,187,.05);
+    --s-f-c1: #666;
+    --s-f-c2: #fff;
+}
+
+
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    padding-top: 3rem;
+    display: block;
+    margin: 0;
+    font-family: "Baloo Da 2";
+}
+
+@media (max-width: 1279px) {
+    body {
+        font-size: 14px;
+        padding-top: 3rem;
+    }
+}
+
+header{
+    background-color: white;
+    box-shadow: 0px 3px 6px #0000000D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 50px;
+    z-index: 1000;
+    padding-right: 20px;
+    padding-left: 10px;
+    align-items: flex-end;
+}
+
+.logo{
+    width: 6rem;
+    height: 3rem;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.bg-bt-gray {
+    background: var(--s-b-bg);
+    border-top: 1px solid #ddd;
+}
+.p-tb-15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+@media (min-width: 1366px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.p-item-page>.container>.row {
+    flex-wrap: nowrap;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    align-content: stretch;
+    flex-direction: row;
+    text-align: center;
+}
+
+.p-item-page #content {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto; 
+    max-width: 100%; 
+    padding-left: 20px; 
+}
+
+@media (min-width: 768px) {
+    .col-md-9 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+}
+
+.col-md-9{
+position: relative;
+width: 100%;
+min-height: 1px;
+padding-right: 15px;
+padding-left: 15px;
+}
+
+h1{
+    font-family: "Baloo Da 2";
+}
+
+.p-items-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.p-item-page .p-item {
+    flex: 25%;
+    max-width: 25%;
+}
+
+.p-item {
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding: 0 5px 10px;
+    margin-bottom: 0;
+    display: flex;
+    position: relative;
+}
+
+@media (max-width: 480px) {
+    .p-item-page .p-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .p-item-page .p-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .p-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media (max-width: 1279px) {
+    .p-item {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+.p-item-inner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(192, 192, 192, 0.1);
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.p-item-img {
+    text-align: center;
+    border-bottom: 3px solid rgba(55, 73, 187, .03);
+    flex: 0 0 220px;
+    padding: 20px;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .p-item-img {
+        flex: 0 0 auto;
+    }
+}
+
+.p-item-img>a {
+    height: 228px;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    color: var(--primary-color);
+}
+
+.p-item-img img {
+    max-width: 100%;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+
+}
+
+.p-item-page .p-item-details {
+    padding: 15px 15px 0 0;
+    position: relative;
+    text-align: left;
+}
+
+.p-item-details {
+    padding: 15px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.p-item-page .p-item .short-description {
+    margin-bottom: 5px;
+}
+
+.short-description {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+    .p-item-page .p-item .short-description {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+}
+
+ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+    padding-left: 2rem;
+}
+
+.p-item-page .short-description li {
+    font-size: 13px;
+    color: #666;
+    position: relative;
+    line-height: 16px;
+    padding-bottom: 10px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+    list-style-type: none;
+}
+
+/*===========================================================BOTTOM==============================================================*/
+
+.bottom-bar{
+    padding: 15px 0;
+    margin: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    min-height: 36px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-sm-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-sm-6{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.pagination{
+    text-align: center;
+}
+
+.pagination li {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 34px;
+    text-align: center;
+    min-width: 36px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.pagination li span.disabled {
+    color: #666;
+    cursor: default;
+}
+
+.pagination li a, .pagination li span {
+    background: #f1f3f5;
+    padding: 0 10px;
+    color: #111;
+    display: block;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.pagination li.active span {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    color: var(--s-primary);
+}
+
+
+/*=================================================================FOOTER==================================================================*/
+
+.contact{
+    background-color: #f3f4f677;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-left: 50px;
+    padding-right: 20px;
+    font-family: "Baloo Da 2";
+}
+
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    gap: 3rem;
+}
+
+.contact-info a{
+    text-decoration: none;
+    color: #565656b6;
+}
+
+.contact-info a:hover{
+    color: var(--primary-color);
+}
+
+.contact-info h4{
+    color: #212529;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.contact-info p{
+    color: #565656b6;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .42s;
+    text-decoration: none;
+}
+
+.contact-info p:hover{
+    color: var(--primary-color);
+}
+
+.contact-info .telephone_numb{
+    color: #565656b6;
+    text-decoration: none;
+}
+
+.contact-info .telephone_numb:hover{
+    color: var(--primary-color);
+}
+
+.contact-info .gmail{
+    text-transform: lowercase; 
+    color: #565656b1;
+    text-decoration: none;
+}
+
+.contact-info .gmail:hover{
+    color: var(--primary-color);
+}
+
+.social-icon i{
+    color: rgb(103, 103, 103);
+    margin-right: 10px;
+    font-size: 20px;
+    transition: all .42s;
+}
+
+.social-icon i:hover{
+    transform: scale(1.3);
+    color: black;
+}
+
+.credit{
+    text-align: center;
+    padding: .3rem;    
+    font-size: 12px;
+    color: #4542427a;
+    border-top: 0.01px solid rgba(0,0,0,.1);
+    background-color: #eee;
+    font-family: "Baloo Da 2";
+}
+
+.credit span{
+    color: var(--primary-color);
+    font-size: small;
+    font-weight: 500;
+    font-family: "Baloo Da 2";
+}
+
+
+
+        /* If you don't want the footer to be responsive, remove these media queries */
+
+        @media (max-width: 880px) {
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+            .footer-distributed .footer-center i {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 750px) {
+            .footer-center div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+
+        @media (min-width: 750px) {
+            .ssl-banner {
+                width: 70%;
+            }
+        }
+
+
+
